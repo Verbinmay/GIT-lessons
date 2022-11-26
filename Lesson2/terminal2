@@ -46,5 +46,3 @@ git read-tree f01a25b
 $ git ls-files
 // if zero after hash it is meanint that they are same
 $ git ls-files-s
-
-

@@ -1,0 +1,13 @@
+GIT CONFIG --GLOBAL USER.NAME <name> // to add information about your name
+GIT CONFIG --GLOBAL USER.EMAIL <name> // to add information about your email
+GIT CONFIG --LIST -all information
+GIT CAT-FILE -P <HASH> -info about
+
+GIT STATUS -current state of git repositiry
+GIT ADD <namefile> -add file to staging area
+GIT ADD . -add all files
+GIT COMMIT -write changes to git repository
+GIT COMMIT -M "text"-commit with comment
+GIT LOG -history of changes (commits)
+GIT CHECHOUT -checkout commit of branch
+GIT RM --CACHED <namefile> -remove from staged to untracked

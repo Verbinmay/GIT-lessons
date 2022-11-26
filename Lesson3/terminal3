@@ -1,0 +1,30 @@
+//transition file from untracked to stage 
+     |--------------------------->
+// <untracked> - <modified> - <staged> - <unmodified>
+
+cd my-project/
+nano new3-file.txt
+git add new3-file.txt
+// here is wrong place for mouse, pls dont use enter and empty strings
+>warning: in the working copy of 'new3-file.txt', LF will be replaced by CRLF the next time Git touches it
+//read
+cat new3-file.txt
+//open files 
+git ls-files
+
+//transition file from stage to untracked  
+     <----------------------------|
+// <untracked> - <modified> - <staged> - <unmodified>
+
+//remove file from stage to untracked
+git rm --cached new3-file.txt
+git status //we can watch file is untracked
+
+//transition file from stage to untracked  
+                                  |------------->
+// <untracked> - <modified> - <staged> - <unmodified>
+
+git commit -m "add new3-file, lesson3"
+
+git log //to end click Q
+
