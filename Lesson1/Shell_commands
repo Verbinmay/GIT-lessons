@@ -1,0 +1,23 @@
+NANO - edit file
+CLEAR - clear terminal
+TAB -Autocomplete command/ two click
+ECHO - print to terminal 
+MAN - Help on specific command 
+TOUCH -create new file
+RM - remove files and directories
+RM -RF -delete directories
+> -write to the file
+>> -append to the file
+CAT -list contents of the file
+MKDIR - make directory 
+IS - list files and direcrories 
+СD - change directory (root folder)
+. - alias of the current directory
+.. - alias of the parent directory
+PWD -user directory 
+CLEAR - clear terminal
+LS - bunch of folders
+LS -L -folders in table format
+LS -LA -with hidden folders
+OPEN . -open current directory in default app
+cd Desktop/<name-folder> - can immediatle go into foulder

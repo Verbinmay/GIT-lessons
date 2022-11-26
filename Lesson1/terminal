@@ -1,0 +1,16 @@
+cd Desktop
+mkdir new-folder
+cd new-folder
+open . //open in app
+cd Desktop/new-folder
+man cleear //all about command
+man touch //all adout it
+touch new-file.txt //create new file
+echo "hello,word" //output in terminal 
+echo "hello,word" > another-file.txt // add text in txt
+cat another-file.txt //read txt
+echo "another line" >> another-file.txt //add text in txt
+nano new-file // open creator txt for new-file and u can write text. ctrl + o -save, enter,  ctrl + x -exit
+cat new-file.txt // look at txt
+rm new-file.txt //delete txt
+rm -rf new-foulder // delete foulder
