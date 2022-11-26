@@ -27,4 +27,3 @@ git status //we can watch file is untracked
 git commit -m "add new3-file, lesson3"
 
 git log //to end click Q
-
