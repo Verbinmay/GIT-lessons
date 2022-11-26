@@ -1,0 +1,50 @@
+echo 'hello, git' | git hash-object --stdin //takes input from standart input 
+>94bab17c85ac96c4dd0cfcb7a16f22f6862733eb //hash
+echo 'hello, git' | git hash-object --stdin -w
+>94bab17c85ac96c4dd0cfcb7a16f22f6862733eb //created new file in .git
+
+$ git cat-file -p 94bab17c85ac96c4dd0cfcb7a16f22f6862733eb
+>hello, git
+$ git cat-file -t 94bab17c85ac96c4dd0cfcb7a16f22f6862733eb
+>blob
+$ git cat-file -s 94bab17c85ac96c4dd0cfcb7a16f22f6862733eb //size
+>11
+
+//create a file on desktop 
+echo "second file in git repository" > new1-file.txt
+//read
+cat new1-file.txt
+//open foulder with project and create hash for file
+$ git hash-object ../new1-file.txt  //file in parants foulder
+>53d959a1b03a865b23712abd8d610ee0c4d0867d
+// the hash not view in objects in .git, need to do this
+$ git hash-object ../new1-file.txt -w
+
+//create tree 
+// search in objects file 
+find .git/objects -type f
+//create tree
+//open nano
+$ nano temp-tree.txt
+// text in, after hash press TAB (Important)
+100644 blob 53d959a1b03a865b23712abd8d610ee0c4d0867d    file1.txt
+100644 blob 94bab17c85ac96c4dd0cfcb7a16f22f6862733eb    file2.txt
+//ctrl + o -save, enter,  ctrl + x -exit
+
+ls -la // and u can see temp-tree.txt
+cat temt-tree.txt //open tree
+$ cat ../temp-tree.txt | git mktree //open and make tree
+>f01a25ba1f6ea8db986261a1c6299c27e4601bcf
+
+
+//we can remove tree 
+rm temp-tree.txt
+
+// in index 
+git read-tree f01a25b 
+// watch files 
+$ git ls-files
+// if zero after hash it is meanint that they are same
+$ git ls-files-s
+
+

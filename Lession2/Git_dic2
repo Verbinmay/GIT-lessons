@@ -1,0 +1,23 @@
+GIT INIT -create .git
+GIT CAT-FILE -P <HASH> -contents of the object
+GIT CAT-FILE -S <HASH> -size of the object
+GIT CAT-FILE -t <HASH> -type of the object
+ECHO 'text' | git hash-object --stdin -w  -create hash
+(--stdin -take input standard input, -w -create git object)
+GIT hash-object <filename> -w - create hash for file 
+
+040000 -directory
+100644 -regular non-executable file
+100664 -regular non-executable group-writeable file 
+100755 -regular executable file
+120000 -symbolic link
+160000 -gitlink
+
+GIT MKTREE - create tree
+GIT LS-FILES - in index/get to take commit
+
+git read-tree <hash> - transfer to staging area from git repository
+git ls-files -watch files
+git ls-files-s -info
+
+GIT CHECKOUT-INDEX -A -to transfer in working directory from index
