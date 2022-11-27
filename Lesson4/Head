@@ -1,0 +1,12 @@
+GIT CHECKOUT <hash>-jump into certain "version" of the project
+GIT CHECKOUT MAIN - jump into main branch and last commit
+CAT .GIT/HEAD -need to know where ur head (ha-ha)
+
+GIT BRANCH -list all local branches
+GIT BRANCH <name> -create new branch
+GIT CHECKOUT <name> -checkout specific branch
+GIT BRANCH -d <name> -delete specific branch
+GIT BRANCH -D - delete non-merged 
+GIT BRANCH -M <old> <new> -rename specific branch 
+
+GIT CHECKOUT -B <branch name>

@@ -1,0 +1,48 @@
+//We install GITdesktop
+
+cd .git/refs/heads
+ls -l
+cat master
+
+
+rm file1.txt
+rm file2.txt
+rm new3-file.txt
+git status
+git add .
+git status//Changes to be committed
+git commit //smth opend
+//press t + i and insert mode open
+//text anythng and pres esc
+//exit insert mod and click :wq
+//commited
+
+> git commit
+[main 1fa9e7e] tenth+ commit
+ 3 files changed, 3 deletions(-)
+ delete mode 100644 file1.txt
+ delete mode 100644 file2.txt
+ delete mode 100644 new3-file.txt
+
+cat .git/HEAD   // find hash last commit and parent hash (commit one before)
+>ref: refs/heads/main
+cat .git/refs/heads/main
+>1fa9e7e90945b05c7074d93a8acfdf9cc0238c16
+
+3fd082  //hash the commit one before
+
+git checkout 3fd082 
+git checkout main//in main branch
+
+git branch
+git checkout -b BR-1
+>Switched to a new branch 'BR-1'
+git branch
+ls
+echo "hello, git " > file4.txt
+ls
+git status
+git commit -m "First commit in the BR-1 branch"
+>[BR-1 0fdf75c] First commit in the BR-1 branch
+  1 file changed, 1 insertion(+)
+  create mode 100644 file4.txt
